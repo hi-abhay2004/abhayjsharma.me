@@ -2,10 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
+
 
 
 body {
@@ -15,7 +17,8 @@ body {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
-
+  /* font-family: "DM Sans", serif; */
+  
 }
 
 font-face{

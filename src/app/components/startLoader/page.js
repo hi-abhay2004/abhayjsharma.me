@@ -5,20 +5,20 @@ const HelloAnimation = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const helloWords = [
     
-    { text: "Hola", language: "es" },
-    { text: "Bonjour", language: "fr" },
-    { text: "Hallo", language: "de" },
-    { text: "こんにちは", language: "ja" },
-    { text: "你好", language: "zh" },
-    { text: "Привет", language: "ru" },
-    { text: "مرحبا", language: "ar" },
-    { text: "Hello", language: "en" },
+    { text: "• Hola", language: "es" },
+    { text: "• Bonjour", language: "fr" },
+    { text: "• Hallo", language: "de" },
+    { text: "• こんにちは", language: "ja" },
+    { text: "• 你好", language: "zh" },
+    { text: "• Привет", language: "ru" },
+    { text: "• مرحبا", language: "ar" },
+    { text: "• Hello", language: "en" },
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % helloWords.length);
-    }, 150); // Change every second
+    }, 235); // Change every second
     return () => clearInterval(interval); // Cleanup on unmount
   }, [helloWords.length]);
 

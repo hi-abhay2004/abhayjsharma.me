@@ -19,14 +19,25 @@
 // }
 
 // export default Home
-import React from 'react'
+"use client"
+import React, { useEffect ,useState} from 'react'
 import HelloAnimation from './components/startLoader/page'
+import Landing from './components/appMain/page';
 function Home() {
+  const [showLoader, setshowLoader] = useState(true);
+  useEffect(() => {
+    const timer= setTimeout(() => {
+      setshowLoader(false);
+    },2000)
+  
+    return () => clearTimeout(timer)
+  }, [])
+  
   return (
 
     <div>
-      <HelloAnimation />
-      Home</div>
+      {showLoader ? <HelloAnimation/> : <Landing/>}
+    </div>
   )
 }
 
