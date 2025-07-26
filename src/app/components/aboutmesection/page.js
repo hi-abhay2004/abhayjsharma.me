@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef, useEffect } from "react";
-import { ScrollReveal } from "../ui-components/ScrollRevel/page";
+import { ScrollReveal } from "../ui-components/ScrollReveal/ScrollReveal";
 
 
 

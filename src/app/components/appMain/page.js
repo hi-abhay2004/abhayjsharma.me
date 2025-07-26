@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 // import NavBar from '../navBar/page'
 import HeroSection from '../../pages/heroSection/page'

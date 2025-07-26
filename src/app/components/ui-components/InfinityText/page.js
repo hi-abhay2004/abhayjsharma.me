@@ -1,6 +1,8 @@
+"use client"
 import Marquee from "react-fast-marquee";
 // import useScrollDirection from "./useScrollDirection";
-import useScrollDirection from "./userscrolldir/page";
+// import useScrollDirection from "./userscrolldir/useScrollDir";
+import useScrollDirection from "./userscrolldir/useScrollDir";
 
 export default function HeroMarquee() {
   const scrollDir = useScrollDirection();

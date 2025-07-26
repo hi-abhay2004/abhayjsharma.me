@@ -17,24 +17,35 @@ export default function HelloLoader({ page }) {
     const [index, setIndex] = useState(0);
     const [dimension, setDimension] = useState({width: 0, height:0});
     const pathname = usePathname();
-    let pageKey = page;
-    if (!pageKey) {
-      if (pathname.includes('work')) pageKey = 'work';
-      else if (pathname.includes('about')) pageKey = 'about';
-      else if (pathname.includes('contact')) pageKey = 'contact';
-      else pageKey = 'default';
+
+    // Normalize page key from pathname
+    function getPageKey(page, pathname) {
+      if (page) return page;
+      let clean = pathname.replace(/^\/+|\/+$/g, ''); // remove leading/trailing slashes
+      if (clean.startsWith('pages/')) clean = clean.slice(6);
+      if (clean === '' || clean === 'home' || clean === undefined) return 'default';
+      const first = clean.split('/')[0];
+      if (wordsMap[first]) return first;
+      return 'default';
     }
+    const pageKey = getPageKey(page, pathname);
     const words = wordsMap[pageKey] || wordsMap.default;
 
-    useEffect( () => {
+    useEffect(() => {
         setDimension({width: window.innerWidth, height: window.innerHeight})
     }, [])
 
+    // Reset index to 0 on pathname or pageKey change
+    useEffect(() => {
+        setIndex(0);
+    }, [pageKey]);
+
     useEffect( () => {
         if(index == words.length - 1) return;
-        setTimeout( () => {
+        const timeout = setTimeout( () => {
             setIndex(index + 1)
         }, index == 0 ? 1000 : 250)
+        return () => clearTimeout(timeout);
     }, [index, words])
 
     const initialPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height} Q${dimension.width/2} ${dimension.height + 300} 0 ${dimension.height}  L0 0`
