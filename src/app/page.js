@@ -19,26 +19,17 @@
 // }
 
 // export default Home
-"use client"
-import React, { useEffect ,useState} from 'react'
-import HelloAnimation from './components/startLoader/page'
+'use client';
+import React from 'react';
 import Landing from './components/appMain/page';
-function Home() {
-  const [showLoader, setshowLoader] = useState(true);
-  useEffect(() => {
-    const timer= setTimeout(() => {
-      setshowLoader(false);
-    },2000)
-  
-    return () => clearTimeout(timer)
-  }, [])
-  
+import { AnimatePresence } from 'framer-motion';
+export default function Home() {
   return (
-
-    <div>
-      {showLoader ? <HelloAnimation/> : <Landing/>}
-    </div>
-  )
+    <main>
+      <AnimatePresence mode="wait">
+        {/* Loader is now handled globally in layout.js, not here */}
+        <Landing key="main" />
+      </AnimatePresence>
+    </main>
+  );
 }
-
-export default Home
