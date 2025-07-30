@@ -350,8 +350,8 @@ export default function Contact() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="absolute bottom-6 w-full px-6 md:px-20 flex justify-between items-center text-sm text-gray-400">
-          <div>LOCAL TIME — {time}</div>
+        <div className="absolute bottom-6 w-full px-6 md:px-32 flex justify-between items-center text-sm text-gray-400">
+          <h1>LOCAL TIME — {time}</h1>
           <div className="flex gap-4">
             <a href="https://www.linkedin.com/in/abhay-j-sharma/" target="_blank" rel="noopener noreferrer" className="hover:underline">LinkedIn</a>
             <a href="https://instagram.com/abhay-j-sharma-142" target="_blank" rel="noopener noreferrer" className="hover:underline">Instagram</a>

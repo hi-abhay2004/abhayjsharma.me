@@ -18,7 +18,7 @@ const Footer = () => {
           </h1>
         </div>
 
-        <button className="relative group top-32 left-80 sm:left-2 w-40 h-40 rounded-full bg-[#4f5cf7] flex items-center justify-center text-white text-lg font-medium transition-transform hover:scale-105">
+        <button className="relative group top-32 left-36 sm:left-2 w-36 h-36 m-6 rounded-full bg-[#4f5cf7] flex items-center justify-center text-white text-lg font-medium transition-transform hover:scale-105">
           Get in touch
         </button>
       </div>
@@ -53,9 +53,9 @@ const Footer = () => {
           <p className="font-medium mb-1">SOCIALS</p>
           <div className="flex gap-4">
             
-            <a href="#" className="hover:underline">Instagram</a>
-            <a href="#" className="hover:underline">Twitter</a>
-            <a href="#" className="hover:underline">LinkedIn</a>
+           <a href="https://www.linkedin.com/in/abhay-j-sharma/" target="_blank" rel="noopener noreferrer" className="hover:underline">LinkedIn</a>
+    <a href="https://instagram.com/abhay-j-sharma-142" target="_blank" rel="noopener noreferrer" className="hover:underline">Instagram</a>
+    <a href="https://github.com/hi-abhay2004" target="_blank" rel="noopener noreferrer" className="hover:underline">GitHub</a>
           </div>
         </div>
       </div>

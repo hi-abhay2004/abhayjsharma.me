@@ -86,7 +86,7 @@ const isBgWhite = hasWhiteBgInitially || !isTopSectionVisible;
         </div>
 
         {/* Mobile Name */}
-        <div className="block sm:hidden ml-auto">
+        <div className="relative  md:hidden ">
           <h1>© code by Abhay</h1>
         </div>
 

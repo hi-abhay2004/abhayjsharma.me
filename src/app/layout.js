@@ -42,15 +42,22 @@ import ClientRoot from "./ClientRoot/page";
 
 export const metadata = {
   title: "Abhay | Full Stack Developer",
+     viewport: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no',
   description: "Portfolio site of Abhay, a creative full stack developer.",
    icons: {
     icon: "/profile-pic.png", // or "/favicon.png"
   },
+   
 };
 
 export default function RootLayout({ children }) {
+  
   return (
     <html lang="en">
+       <head>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+      </head>
       <body className="antialiased">
         <ClientRoot>{children}</ClientRoot>
       </body>

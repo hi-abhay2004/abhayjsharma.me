@@ -11,7 +11,7 @@ import { usePathname } from "next/navigation";
 export default function ClientRoot({ children }) {
   const [isLoading, setIsLoading] = useState(true);
   const pathname = usePathname();
-
+  const hideFooter = pathname === "/pages/contact";
   useEffect(() => {
     setIsLoading(true);
     const timer = setTimeout(() => {
@@ -30,7 +30,7 @@ export default function ClientRoot({ children }) {
         <>
           <NavBar />
           {children}
-          <Footer />
+         {!hideFooter && <Footer />}
         </>
       )}
     </AnimatePresence>

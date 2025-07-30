@@ -24,7 +24,7 @@ const projects = [
     id: 'dsu-branding',
     title: 'Dsu Branding Website (to be hosted)',
     type: 'video',
-    image: '/projects/branding.mp4',
+    image: '/projects/branding.mov',
     liveUrl: 'https://www.figma.com/proto/uHMjI3QuUcZWAVIlmZEdLC/mini-project-3?page-id=0%3A1&node-id=519-1470&viewport=-12522%2C754%2C0.14&t=znl7Ye1TBZSV9AtL-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=107%3A7',
     githubUrl: 'https://github.com/hi-abhay2004/',
   },
@@ -32,7 +32,7 @@ const projects = [
     id: 'dsu-sa',
     title: 'Dsu Student Affairs Website (to be hosted)',
     type: 'video',
-    image: '/projects/sa.mp4', // video file
+    image: '/projects/sa.mov', // video file
     liveUrl: 'https://www.figma.com/proto/EcD6eGTE6Wmi5x28vIASiB/student-affairs-page?node-id=353-877&t=yodMhaCrw9vLqoPI-1&scaling=min-zoom&content-scaling=fixed&page-id=59%3A3396&starting-point-node-id=59%3A4257&show-proto-sidebar=1',
     githubUrl: 'https://github.com/hi-abhay2004/',
   },
