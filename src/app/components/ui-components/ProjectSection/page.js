@@ -9,7 +9,7 @@ const projects = [
     title: 'AI Customer Support',
     type: 'image',
     image: '/projects/ai-support.jpeg',
-    liveUrl: 'https://ai-customer-support-d8o2-4nc2zdli2-hi-abhay2004s-projects.vercel.app/',
+    liveUrl: 'https://ai-customer-support-d8o2.vercel.app/',
     githubUrl: 'https://github.com/hi-abhay2004/Ai-customer-support',
   },
   {
